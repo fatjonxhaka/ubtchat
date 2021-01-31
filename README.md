@@ -15,3 +15,5 @@ Krijimi i nje chat-i per bisede mes studenteve te UBT rreth temave te ndryshme.
 ![login](https://user-images.githubusercontent.com/78213991/106371364-ce5c4e00-6363-11eb-8769-019418854d2c.png)
 
 ![chatform](https://user-images.githubusercontent.com/78213991/106371367-d4eac580-6363-11eb-84f5-cbed2f6a32ca.png)
+
+![db](https://user-images.githubusercontent.com/78213991/106371371-dae0a680-6363-11eb-8f73-748b16c3460e.png)

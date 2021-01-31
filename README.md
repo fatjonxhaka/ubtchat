@@ -8,3 +8,4 @@ Krijimi i nje chat-i per bisede mes studenteve te UBT rreth temave te ndryshme.
 
 
 
+![serverworking](https://user-images.githubusercontent.com/78213991/106371334-92c18400-6363-11eb-894e-fa37a3f11870.png)

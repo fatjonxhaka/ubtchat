@@ -61,4 +61,14 @@ class StartCommunication(Communicate):
             self.broadcastMessage(self.message) 
         
         conn.close()
+        
+      def broadcastMessage(self, message): 
+        for client in self.clients: 
+            client.send(message) 
+
+if __name__ == "__main__":
+
+    start = StartCommunication()
+    start.startChat()
+
  

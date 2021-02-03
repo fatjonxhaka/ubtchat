@@ -47,3 +47,25 @@ class CreateFrame(WelcomeWindow):
 
         #ndryshimi i titullit te dritares
         self.win.title("UBT Students Point")
+        
+        def add_frame(self):
+        #krijimi i kornizes se brendshme
+        self.frame = Frame(self.win, height=300, width=450)
+        self.frame.place(x=80, y=50)
+
+        x, y = 70, 20
+
+        # vendosja e fotografise ne kornize
+        self.img = PhotoImage(file='ubt-logo1.png')
+        self.label = Label(self.frame, image=self.img)
+        self.label.place(x=x+80, y=y+0)
+
+        self.labeltitle = Label(self.frame, text="Welcome to UBT Students Point ")
+        self.labeltitle.config(font=("Rubik", 20),fg='#808080')
+        self.labeltitle.place(x=25, y=y+150)
+
+        self.button = Button(self.frame, text="Continue", font=('Cambria', 20,)
+                             , bg='#359fd2', fg='white', command=self.login)
+        self.button.place(x=x+80, y=y+200)
+
+        self.win.mainloop()

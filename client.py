@@ -86,9 +86,9 @@ class Design(MainForms, ContinueNext):
         self.lineDesign2 = Label(self.login, bg='#D3D3D3', relief='groove')
         self.lineDesign2.place(relx=0.180, rely=0.445, height=7, width=400)
         
-                self.User  = Label(self.login, 
-                               text = "Username: ", 
-                               font = "Cambria 14 bold", fg = '#ffffff', bg='#359fd2') 
+        self.User  = Label(self.login, 
+                           text = "Username: ", 
+                           font = "Cambria 14 bold", fg = '#ffffff', bg='#359fd2') 
           
         self.User.place(relx=0.138, rely=0.480, height=50, width=200)
           

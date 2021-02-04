@@ -85,4 +85,32 @@ class ContinueNext:
 
         self.lineDesign2 = Label(self.login, bg='#D3D3D3', relief='groove')
         self.lineDesign2.place(relx=0.180, rely=0.445, height=7, width=400)
+        
+                self.User  = Label(self.login, 
+                               text = "Username: ", 
+                               font = "Cambria 14 bold", fg = '#ffffff', bg='#359fd2') 
+          
+        self.User.place(relx=0.138, rely=0.480, height=50, width=200)
+          
+        self.space1 = Entry(self.login,
+                             font = "Cambria 13 bold", fg='#808080', borderwidth=2, bg='white', relief='ridge') 
+          
+        self.space1.place(relx=0.4, rely=0.490, height=40, relwidth=0.375)
+          
+        self.space1.focus() 
+
+
+        self.Password  = Label(self.login, 
+                               text = "Password: ",
+                               font = "Cambria 14 bold", fg = '#ffffff', bg='#359fd2') 
+          
+        self.Password.place(relx=0.138, rely=0.593, height=40, width=200)
+
+
+        self.space2 = Entry(self.login,
+                             font = "Cambria 13 bold", show = '*', fg='#808080', borderwidth=2, bg='white', relief='ridge') 
+          
+        self.space2.place(relx=0.4, rely=0.593, height=40, relwidth=0.375)
+          
+        self.space2.focus() 
 

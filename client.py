@@ -137,3 +137,14 @@ class Design(MainForms, ContinueNext):
                                 justify = CENTER )
 
         self.copyRights.place(relx=0.169, rely=0.935, height=41, width=444)
+        
+        #Krijimi i login butonit dhe vendosja ne dritare
+        self.Login = Button(self.login, 
+                         text = "LOGIN",  
+                         font = "Cambria 14 bold", fg='#808080', bg='white', relief='ridge', 
+                         command = lambda: self.goAhead(self.space1.get()))
+        
+        self.Login.place(relx=0.431, rely=0.772, height=44, width=107)
+        self.Login.configure(state=DISABLED)
+
+        self.Window.mainloop()

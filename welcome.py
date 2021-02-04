@@ -28,12 +28,10 @@ class CreateFrame(WelcomeWindow):
     def __init__(self):
         
         self.win = Tk()
-
-        
+        self.win.wm_iconbitmap('ubt-icon.ico')
+                
         self.canvas = Canvas(self.win, width=600, height=400, bg='#359fd2')
         self.canvas.pack(expand=YES, fill=BOTH)
-   
-         
         
         width = self.win.winfo_screenwidth()
         height = self.win.winfo_screenheight()

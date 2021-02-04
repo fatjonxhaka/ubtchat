@@ -62,9 +62,9 @@ class StartCommunication(Communicate):
         
         conn.close()
         
-      def broadcastMessage(self, message): 
-        for client in self.clients: 
-            client.send(message) 
+     def broadcastMessage(self, message): 
+       for client in self.clients: 
+           client.send(message) 
 
 if __name__ == "__main__":
 

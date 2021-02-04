@@ -149,9 +149,9 @@ class Design(MainForms, ContinueNext):
 
         self.Window.mainloop()
         
-        def goAhead(self, name): 
+    def goAhead(self, name): 
         ### Pjesa e inkorporimit te databazes.
-
+        
         informations = (self.space1.get(), self.space2.get())
         if self.space1.get() == "":
             messagebox.showinfo("Alert!!!","Please enter username first")

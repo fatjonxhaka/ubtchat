@@ -275,3 +275,14 @@ class Design(MainForms, ContinueNext):
                              rely = 0.008, 
                              relheight = 0.06,  
                              relwidth = 0.22)
+        
+        self.text.config(cursor = "arrow") 
+          
+        scrollBar = Scrollbar(self.text) 
+
+            scrollBar.place(relheight = 1, 
+                        relx = 0.974) 
+          
+        scrollBar.config(command = self.text.yview) 
+          
+        self.text.config(state = DISABLED)

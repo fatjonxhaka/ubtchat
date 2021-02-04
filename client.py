@@ -286,3 +286,18 @@ class Design(MainForms, ContinueNext):
         scrollBar.config(command = self.text.yview) 
           
         self.text.config(state = DISABLED)
+        
+    def sendButton(self, msg): 
+        self.text.config(state = DISABLED) 
+        self.msg=msg
+        if msg == "":
+            messagebox.showinfo("Alert","Please type something!!!")
+        else:
+            self.message.delete(0, END) 
+            snd= threading.Thread(target = self.sendMessage) 
+            snd.start() 
+
+    def closeApp(self):
+        self.answer = messagebox.askquestion("Logout","Are you sure you want to logout!!")
+        if self.answer == 'yes':
+            self.Window.destroy()

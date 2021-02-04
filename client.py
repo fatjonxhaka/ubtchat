@@ -129,7 +129,7 @@ class Design(MainForms, ContinueNext):
         
         self.acceptRules.place(relx=0.185, rely=0.697, relheight=0.037, relwidth=0.648)
         
-                self.copyRights = Label (self.login,
+        self.copyRights = Label (self.login,
                                 text = "COPYRIGHT  © 2021   UNIVERSITY OF BUSINESS AND TECHNOLOGY",
                                 font = "Cambria 9 bold",
                                 fg = '#ffffff',
@@ -211,3 +211,9 @@ class Design(MainForms, ContinueNext):
                               fg = "white", 
                               text = self.name , 
                                font = "Cambria 12 bold") 
+        
+        self.showName.place(relx=0.298, rely=0.091, height=31, width=184) 
+
+        self.logoF2foto = PhotoImage(file='form2.png')
+        self.logoF2 = Label(self.Window, image=self.logoF2foto, bg='#01A9E8')  
+        self.logoF2.place(relx=0.095, rely=0.011, height=85, width=104)

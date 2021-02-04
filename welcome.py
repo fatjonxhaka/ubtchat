@@ -69,3 +69,11 @@ class CreateFrame(WelcomeWindow):
         self.button.place(x=x+80, y=y+200)
 
         self.win.mainloop()
+        
+         def login(self):
+        #mbyllja e dritares aktuale
+        self.win.destroy()
+
+        #hapja e dritares se re
+        log = client.Design()
+        log.Form1design()

@@ -298,3 +298,30 @@ class Design(MainForms, ContinueNext):
         self.answer = messagebox.askquestion("Logout","Are you sure you want to logout!!")
         if self.answer == 'yes':
             self.Window.destroy()
+
+            def receive(self): 
+    
+        while True: 
+            try: 
+                message = self.client.recv(1024).decode(self.FORMAT) 
+                  
+                if message == 'NAME': 
+                    self.client.send(self.name.encode(self.FORMAT)) 
+                else:
+                    self.text.config(state = NORMAL) 
+                    self.text.insert(END, 
+                                         message+"\n\n") 
+                      
+                    self.text.config(state = DISABLED) 
+                    self.text.see(END) 
+            except: 
+                print("An error occured!") 
+                self.client.close() 
+                break 
+           
+    def sendMessage(self): 
+        self.text.config(state=DISABLED) 
+        while True: 
+            message = (f"{self.name}: {self.msg}") 
+            self.client.send(message.encode(self.FORMAT))     
+            break    

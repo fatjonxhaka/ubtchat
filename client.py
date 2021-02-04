@@ -48,7 +48,7 @@ class ContinueNext:
 
         messagebox.showwarning("Information!","Sorry you can't continue next!!!")
         
-        class Design(MainForms, ContinueNext):
+class Design(MainForms, ContinueNext):
 
     def Form1design(self):
 

@@ -114,3 +114,17 @@ class Design(MainForms, ContinueNext):
           
         self.space2.focus() 
 
+        self.var1 = IntVar()
+        self.acceptRules = Checkbutton(self.login, 
+                                       text="I accept the rules and conditions to enter this chat",
+                                       font = "Cambria 10 bold",
+                                       activebackground = '#359fd2',
+                                       highlightcolor = '#359fd2',
+                                       selectcolor = '#359fd2',
+                                       variable = self.var1,
+                                       fg = 'white',
+                                       bg = '#359fd2',
+                                       justify ='left',
+                                       command=self.allowLogin)
+        
+        self.acceptRules.place(relx=0.185, rely=0.697, relheight=0.037, relwidth=0.648)

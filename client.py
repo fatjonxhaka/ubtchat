@@ -217,3 +217,61 @@ class Design(MainForms, ContinueNext):
         self.logoF2foto = PhotoImage(file='form2.png')
         self.logoF2 = Label(self.Window, image=self.logoF2foto, bg='#01A9E8')  
         self.logoF2.place(relx=0.095, rely=0.011, height=85, width=104)
+        
+        #Krijimi i butonit logout
+        self.logout = Button(self.Window, 
+                                text = "Log Out", 
+                                font = "Cambria 12 bold",  
+                                width = 10,
+                                bg = "#36ABE0", fg="white", command = self.closeApp) 
+          
+        self.logout.place(relwidth=0.2,relheight=0.06,relx = 0.70, 
+                      rely = 0.05)
+
+
+
+        self.line = Label(self.Window, 
+                          bg = "#D9E7EB")  
+        self.line.place(relx=-0.021, rely=0.182, width=480, height=11)
+          
+        self.text = Text(self.Window, 
+                             width = 20,  
+                             height = 2, 
+                             bg = "#ffffff", 
+                             fg = "#000000", 
+                             font = "Cambria 12",  
+                             padx = 5, 
+                             pady = 5) 
+          
+        self.text.place(relx=0.0, rely=0.2, height=345, width=470) 
+          
+        self.bottomPart = Label(self.Window, 
+                                 bg = "#D7E5EA", 
+                                 height = 80) 
+          
+        self.bottomPart.place(relwidth = 1, 
+                               rely = 0.825) 
+          
+        self.message = Entry(self.bottomPart, 
+                              bg = "#ffffff", 
+                              fg = "#000000", 
+                              font = "Cambria 12") 
+          
+        self.message.place(relwidth = 0.74, 
+                            relheight = 0.06, 
+                            rely = 0.008, 
+                            relx = 0.011) 
+          
+        self.message.focus() 
+          
+        self.send = Button(self.bottomPart, 
+                                text = "Send", 
+                                font = "Rubik 12 bold",  
+                                width = 20, 
+                                bg = "#01A9E8", fg="white",
+                                command = lambda : self.sendButton(self.message.get())) 
+          
+        self.send.place(relx = 0.77, 
+                             rely = 0.008, 
+                             relheight = 0.06,  
+                             relwidth = 0.22)

@@ -178,7 +178,6 @@ class Design(MainForms, ContinueNext):
             self.Login.configure(state=ACTIVE)
             #self.acceptRules.configure(state=NORMAL)
 
-
     def chatlayout(self,name): 
         
         self.name = name 
@@ -227,8 +226,6 @@ class Design(MainForms, ContinueNext):
           
         self.logout.place(relwidth=0.2,relheight=0.06,relx = 0.70, 
                       rely = 0.05)
-
-
 
         self.line = Label(self.Window, 
                           bg = "#D9E7EB")  

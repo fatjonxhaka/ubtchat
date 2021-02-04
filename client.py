@@ -128,3 +128,12 @@ class Design(MainForms, ContinueNext):
                                        command=self.allowLogin)
         
         self.acceptRules.place(relx=0.185, rely=0.697, relheight=0.037, relwidth=0.648)
+        
+                self.copyRights = Label (self.login,
+                                text = "COPYRIGHT  © 2021   UNIVERSITY OF BUSINESS AND TECHNOLOGY",
+                                font = "Cambria 9 bold",
+                                fg = '#ffffff',
+                                bg = '#359fd2',
+                                justify = CENTER )
+
+        self.copyRights.place(relx=0.169, rely=0.935, height=41, width=444)

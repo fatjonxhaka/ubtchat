@@ -19,7 +19,7 @@ class DatabaseLink(Database):
         )
         self.cursor = self.connection.cursor()  
         try:
-            self.cursor.execute("SELECT * FROM `ubtchatlist` WHERE `Perdoruesi`=%s AND `Fjalekalimi`=%s",tup)
+            self.cursor.execute("SELECT * FROM `ubtchatlista` WHERE `Perdoruesi`=%s AND `Fjalekalimi`=%s",tup)
             return (self.cursor.fetchone())
         except:
             return False

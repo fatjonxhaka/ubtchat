@@ -148,3 +148,66 @@ class Design(MainForms, ContinueNext):
         self.Login.configure(state=DISABLED)
 
         self.Window.mainloop()
+        
+        def goAhead(self, name): 
+        ### Pjesa e inkorporimit te databazes.
+
+        informations = (self.space1.get(), self.space2.get())
+        if self.space1.get() == "":
+            messagebox.showinfo("Alert!!!","Please enter username first")
+        elif self.space2.get() == "":
+            messagebox.showinfo("Alert!!!","Please enter password first")
+        else:
+            checklist = db.DatabaseLink().dbcreate(informations)
+            if checklist:
+                messagebox.showinfo("Message","Login Successfully")
+                self.login.destroy()
+                self.chatlayout(name)
+                
+                # pranimi i informcaioneve nga serveri 
+                rcv = threading.Thread(target=self.receive) 
+                rcv.start()
+            else:
+                messagebox.showinfo("Message","Your username/password is wrong")
+
+    def allowLogin(self):
+        if self.var1.get()==0:
+            self.Login.configure(state=DISABLED)
+            #self.acceptRules.configure(state=NORMAL)
+        else:
+            self.Login.configure(state=ACTIVE)
+            #self.acceptRules.configure(state=NORMAL)
+
+
+    def chatlayout(self,name): 
+        
+        self.name = name 
+        self.Window.deiconify() 
+        self.Window.title("UBT Student - CHATROOM")
+        #çaktivizimi i ndryshimit te madhesise se dritares
+        self.Window.resizable(width = False, 
+                              height = False) 
+        self.Window.configure(width = 470, 
+                              height = 550, 
+                              bg = "#01A9E8") 
+        #shfaqja e dritares ne qender te ekranit
+        width = self.Window.winfo_screenwidth()
+        height = self.Window.winfo_screenheight()
+        x = int(width / 2 - 470 / 2)
+        y = int(height / 2 - 550 / 2)
+        str2 = "470x550+"+ str(x) + "+" + str(y)
+        self.Window.geometry(str2)
+
+        self.Welcome = Label(self.Window, 
+                             bg = "#01A9E8",  
+                              fg = "white", 
+                              text = "Welcome" , 
+                               font = "Cambria 14 bold") 
+          
+        self.Welcome.place(relx=0.298, rely=0.018, height=31, width=184)
+        #paraqitja e emrit te userit ne dritare
+        self.showName = Label(self.Window, 
+                             bg = "#01A9E8",  
+                              fg = "white", 
+                              text = self.name , 
+                               font = "Cambria 12 bold") 

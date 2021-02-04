@@ -77,3 +77,8 @@ class CreateFrame(WelcomeWindow):
         #hapja e dritares se re
         log = client.Design()
         log.Form1design()
+
+        if __name__ == "__main__":
+
+    x = CreateFrame()
+    x.add_frame()

@@ -299,7 +299,7 @@ class Design(MainForms, ContinueNext):
         if self.answer == 'yes':
             self.Window.destroy()
 
-            def receive(self): 
+    def receive(self): 
     
         while True: 
             try: 

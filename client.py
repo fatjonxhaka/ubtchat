@@ -277,7 +277,7 @@ class Design(MainForms, ContinueNext):
           
         scrollBar = Scrollbar(self.text) 
 
-            scrollBar.place(relheight = 1, 
+        scrollBar.place(relheight = 1, 
                         relx = 0.974) 
           
         scrollBar.config(command = self.text.yview) 

@@ -8,7 +8,7 @@ Krijimi i nje chat-i per bisede mes studenteve te UBT rreth temave te ndryshme.
 
 
 
-![serverworking](https://user-images.githubusercontent.com/78213991/106371334-92c18400-6363-11eb-894e-fa37a3f11870.png)
+![serveri](https://user-images.githubusercontent.com/78213991/107124270-208cfa00-68a3-11eb-9515-ea3414cb9dd2.png)
 
 ![welcome](https://user-images.githubusercontent.com/78213991/106387321-91cb3980-63d9-11eb-8312-08202e5448ad.png)
 
